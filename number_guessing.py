@@ -24,3 +24,17 @@ def guess_number(low, high, num_attempts):
     :param num_attempts: The number of attempts the user is given to guess the correct number.
     :returns: True if the user answers any attempt correctly, False otherwise.
     """
+    import random
+    number=random.randint(low,high)
+    rule=f'You have {num_attempts} times to guess the number between {low} and {high}.'
+    print(rule)
+    
+    for i in range(num_attempts):
+        guess=input('Enter a number: ')
+        if guess.isdigit():
+            if int(guess)==number:
+                return True
+    
+   
+    return False
+    
